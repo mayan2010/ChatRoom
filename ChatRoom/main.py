@@ -24,7 +24,6 @@ def home():
     
 
     if request.method == "POST":
-        print(request.form)
         name = request.form.get("name")
         code = request.form.get("code")
         join = request.form.get("join", False)
@@ -41,7 +40,6 @@ def home():
         if create != False:
 
             room = generateCode()
-            print(room)
             rooms[room] = {"members": 0, "messages": []}
         
 
